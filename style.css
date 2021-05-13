@@ -1,0 +1,106 @@
+body { 
+    color: #000; 
+    line-height: 150%; 
+    }
+*{
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+}
+a, span { color: #005CDF; }
+
+span a { text-decoration: none; }
+
+h1{
+    font-size: 30px;
+    margin-bottom:30px;
+}
+
+#visualizer{
+    height: 400px;  
+    background: #333;  
+}
+#progress_box{
+    margin-top: 50px;
+    position: relative;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+}
+input{
+    padding-bottom: 30px;
+}
+#track_time{
+    display: inline-block;
+    position: absolute;
+    font-size: 25px;
+    font-family: Arial;
+    color: #3ab3a8;
+    font-weight: bolder;
+    top: 80px;
+    right: 0;
+}
+#track_time .total{
+    color: #555;
+    font-size: 15px;
+}
+#track_time .seek{
+    color: #000;
+    font-weight: bolder;
+}
+#progress_bar_box{
+    position: relative;
+    background: #ccc;
+    cursor:pointer;
+}
+#progress_bar{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    
+    position: relative;
+    z-index: 2;
+}
+#progress{
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 0;
+    height: 40px;
+    background: #3ab3a8;
+    transition: width 0.3s linear;
+    z-index: 1;
+}
+    #play{
+    position: absolute;
+    top: 85px;
+    right: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: -15px;
+    background: #fff;
+    padding: 0px;
+    cursor: pointer;
+}
+#play.pause:before,
+#play.pause:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 5px;
+    width: 8px;
+    height: 30px;
+    background: #3ab3a8;
+}
+    #play.pause:after{
+    left: 17px;
+}
+#play.play:after{
+    position: absolute;
+    content: "";
+    left: 11px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent transparent #777;
+}
